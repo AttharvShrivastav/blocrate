@@ -297,8 +297,32 @@ const initPlatformsCarousel = () => {
   document.getElementById("platforms-next").addEventListener("click", () => goTo(currentIndex + 1));
 };
 
+const initPassportTilt = () => {
+  const phone = document.querySelector(".passport-phone");
+  if (!phone) return;
+
+  gsap.set(phone, { transformPerspective: 900 });
+
+  const rotX = gsap.quickTo(phone, "rotateX", { duration: 0.55, ease: "power3.out" });
+  const rotY = gsap.quickTo(phone, "rotateY", { duration: 0.55, ease: "power3.out" });
+
+  phone.addEventListener("pointermove", (e) => {
+    const b = phone.getBoundingClientRect();
+    const x = (e.clientX - b.left) / b.width - 0.5;
+    const y = (e.clientY - b.top) / b.height - 0.5;
+    rotX(y * -11);
+    rotY(x * 15);
+  });
+
+  phone.addEventListener("pointerleave", () => {
+    rotX(0);
+    rotY(0);
+  });
+};
+
 splitText();
 initCursorGlow();
 initHeroMouseParallax();
 initAnimations();
 initPlatformsCarousel();
+initPassportTilt();

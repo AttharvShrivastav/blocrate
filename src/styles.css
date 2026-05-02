@@ -296,7 +296,7 @@ h2 {
 .wallet-section {
   display: grid;
   gap: clamp(3.1rem, 5vw, 4.9rem);
-  padding-block: clamp(3.1rem, 6vw, 5rem) clamp(5rem, 8vw, 7rem);
+  padding-block: clamp(5rem, 9vw, 8rem);
   background: #000;
 }
 
@@ -305,7 +305,7 @@ h2 {
   min-height: 100vh;
   flex-direction: column;
   justify-content: center;
-  padding-block: clamp(2rem, 3.4vh, 2.8rem);
+  padding-block: clamp(5rem, 9vw, 8rem);
   background: #000;
 }
 
@@ -334,10 +334,14 @@ h2 {
   grid-template-columns: minmax(22rem, 0.93fr) minmax(27rem, 0.76fr);
   gap: clamp(2.4rem, 3.7vw, 3.4rem);
   align-items: start;
+  perspective: 900px;
+  perspective-origin: center center;
 }
 
 .passport-phone {
   position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
   min-height: clamp(27rem, 39.2vw, 34.9rem);
   overflow: hidden;
   border-radius: 16px;
@@ -614,7 +618,7 @@ h2 {
 
 .cta-bg {
   position: absolute;
-  top: -4rem;
+  top: 2rem;
   left: -6rem;
   z-index: 0;
   width: min(90vw, 80rem);

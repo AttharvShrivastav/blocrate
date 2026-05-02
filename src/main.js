@@ -78,7 +78,26 @@ app.innerHTML = `
     </div>
   </section>
 
-  <section class="platforms-section" id="waitlist">
+  <section class="cta-section section-shell" id="waitlist">
+    <div class="cta-card" data-animate="rise">
+      <img class="cta-bg" src="${content.cta.image}" alt="" />
+      <div class="cta-copy">
+        <h2 class="split" data-split>${content.cta.title}</h2>
+        <p>${content.cta.body}</p>
+      </div>
+      <div class="cta-actions">
+        <a class="button button-ghost" href="#features">${content.cta.secondaryCta}</a>
+        <a class="button button-primary" href="#waitlist">
+          <span>${content.cta.primaryCta}</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h13m-6-6 6 6-6 6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="platforms-section" id="platforms">
     <div class="platforms-header section-shell">
       <h2 class="split platforms-title" data-split>${content.platforms.title}</h2>
       <div class="platforms-nav">
@@ -106,6 +125,49 @@ app.innerHTML = `
       </div>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <img class="footer-bg-img" src="assets/footer-bg.png" alt="" aria-hidden="true" />
+    <div class="footer-inner section-shell">
+
+      <div class="footer-card">
+        <div class="footer-card-copy">
+          <h2 class="split" data-split>${content.cta.title}</h2>
+          <p>${content.cta.body}</p>
+        </div>
+        <div class="footer-card-action">
+          <a class="button button-primary" href="#waitlist">
+            <span>${content.cta.primaryCta}</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13m-6-6 6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="gradient-rule footer-rule" aria-hidden="true"></div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        ${content.nav.map((item) => `<a href="#">${item}</a>`).join("")}
+      </nav>
+
+      <div class="footer-brand-block">
+        <a class="brand footer-brand-wordmark" href="#">
+          Blocrate&nbsp;<i aria-hidden="true"></i>
+        </a>
+        <p class="footer-tagline">${content.footer.tagline}</p>
+      </div>
+
+      <div class="footer-social" role="list" aria-label="Social links">
+        ${content.footer.social.map((s) => `
+          <a href="${s.href}" aria-label="${s.label}" role="listitem" target="_blank" rel="noopener">
+            <i class="ph ${s.icon}" aria-hidden="true"></i>
+          </a>
+        `).join("")}
+      </div>
+
+    </div>
+  </footer>
 `;
 
 const splitText = () => {

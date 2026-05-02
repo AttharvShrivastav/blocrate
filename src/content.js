@@ -143,6 +143,18 @@ export const content = {
     primaryCta: "Join Waitlist",
     image: "assets/cta-bg.png",
   },
+  footer: {
+    tagline: "Private, global crypto credit infrastructure.",
+    social: [
+      { icon: "ph-x-logo", label: "X / Twitter", href: "#" },
+      { icon: "ph-threads-logo", label: "Threads", href: "#" },
+      { icon: "ph-instagram-logo", label: "Instagram", href: "#" },
+      { icon: "ph-discord-logo", label: "Discord", href: "#" },
+      { icon: "ph-telegram-logo", label: "Telegram", href: "#" },
+      { icon: "ph-linkedin-logo", label: "LinkedIn", href: "#" },
+      { icon: "ph-envelope", label: "Email", href: "#" },
+    ],
+  },
   roadmap: [
     "Private beta with embedded credit widgets",
     "Protocol risk engine and capital routing API",

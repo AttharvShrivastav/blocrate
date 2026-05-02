@@ -79,8 +79,8 @@ app.innerHTML = `
   </section>
 
   <section class="cta-section section-shell" id="waitlist">
+    <img class="cta-bg" src="${content.cta.image}" alt="" aria-hidden="true" />
     <div class="cta-card" data-animate="rise">
-      <img class="cta-bg" src="${content.cta.image}" alt="" />
       <div class="cta-copy">
         <h2 class="split" data-split>${content.cta.title}</h2>
         <p>${content.cta.body}</p>
@@ -134,7 +134,7 @@ app.innerHTML = `
 
         <div class="footer-cta-row">
           <div class="footer-card-copy">
-            <h2 class="split" data-split>${content.cta.title}</h2>
+            <h2>${content.cta.title}</h2>
             <p>${content.cta.body}</p>
           </div>
           <div class="footer-card-action">

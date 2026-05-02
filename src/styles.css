@@ -614,11 +614,12 @@ h2 {
 
 .cta-bg {
   position: absolute;
-  inset: -4.5rem auto auto -8.5rem;
+  top: -4rem;
+  left: -6rem;
   z-index: 0;
-  width: min(88vw, 78rem);
+  width: min(90vw, 80rem);
   max-width: none;
-  opacity: 0.82;
+  opacity: 0.9;
   pointer-events: none;
   user-select: none;
 }
@@ -1308,6 +1309,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   gap: clamp(1.6rem, 3.5vw, 3.8rem);
   margin-bottom: clamp(2.8rem, 5vw, 4.5rem);
   color: rgba(255, 255, 255, 0.5);
@@ -1315,6 +1318,7 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .footer-nav a:hover {

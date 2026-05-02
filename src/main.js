@@ -78,7 +78,7 @@ app.innerHTML = `
     </div>
   </section>
 
-  <section class="platforms-section" id="platforms">
+  <section class="platforms-section" id="waitlist">
     <div class="platforms-header section-shell">
       <h2 class="split platforms-title" data-split>${content.platforms.title}</h2>
       <div class="platforms-nav">
@@ -103,25 +103,6 @@ app.innerHTML = `
             `
           )
           .join("")}
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section section-shell" id="waitlist">
-    <div class="cta-card" data-animate="rise">
-      <img class="cta-bg" src="${content.cta.image}" alt="" />
-      <div class="cta-copy">
-        <h2 class="split" data-split>${content.cta.title}</h2>
-        <p>${content.cta.body}</p>
-      </div>
-      <div class="cta-actions">
-        <a class="button button-ghost" href="#features">${content.cta.secondaryCta}</a>
-        <a class="button button-primary" href="#waitlist">
-          <span>${content.cta.primaryCta}</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 12h13m-6-6 6 6-6 6" />
-          </svg>
-        </a>
       </div>
     </div>
   </section>
@@ -223,53 +204,35 @@ const initAnimations = () => {
 
 };
 
-const initPlatformsScroll = () => {
-  const section = document.querySelector(".platforms-section");
+const initPlatformsCarousel = () => {
   const track = document.querySelector(".platforms-track");
-  if (!section || !track) return;
-
-  const getScrollAmount = () => -(track.scrollWidth - window.innerWidth);
-
-  gsap.to(track, {
-    x: getScrollAmount,
-    ease: "none",
-    scrollTrigger: {
-      id: "platforms",
-      trigger: section,
-      start: "top top",
-      end: () => `+=${Math.abs(getScrollAmount())}`,
-      pin: true,
-      scrub: 1.2,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-    },
-  });
+  if (!track) return;
 
   const cards = document.querySelectorAll(".platform-card");
   let currentIndex = 0;
 
-  const scrollToIndex = (index) => {
-    const st = ScrollTrigger.getById("platforms");
-    if (!st) return;
-    const total = cards.length - 1;
-    const progress = index / total;
-    const targetScroll = st.start + progress * (st.end - st.start);
-    window.scrollTo({ top: targetScroll, behavior: "smooth" });
+  const getCardStep = () => {
+    const card = cards[0];
+    const style = getComputedStyle(track);
+    const gap = parseFloat(style.gap) || 24;
+    return card.offsetWidth + gap;
   };
 
-  document.getElementById("platforms-prev").addEventListener("click", () => {
-    currentIndex = Math.max(0, currentIndex - 1);
-    scrollToIndex(currentIndex);
-  });
+  const goTo = (index) => {
+    currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+    gsap.to(track, {
+      x: -currentIndex * getCardStep(),
+      duration: 0.65,
+      ease: "power3.out",
+    });
+  };
 
-  document.getElementById("platforms-next").addEventListener("click", () => {
-    currentIndex = Math.min(cards.length - 1, currentIndex + 1);
-    scrollToIndex(currentIndex);
-  });
+  document.getElementById("platforms-prev").addEventListener("click", () => goTo(currentIndex - 1));
+  document.getElementById("platforms-next").addEventListener("click", () => goTo(currentIndex + 1));
 };
 
 splitText();
 initCursorGlow();
 initHeroMouseParallax();
 initAnimations();
-initPlatformsScroll();
+initPlatformsCarousel();

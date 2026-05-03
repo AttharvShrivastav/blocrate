@@ -421,17 +421,17 @@ h2 {
 .passport-feature h3 {
   margin: 0 0 0.9rem;
   color: var(--text);
-  font-size: clamp(1.8rem, 2.35vw, 2.35rem);
+  font-size: clamp(1.15rem, 1.45vw, 1.5rem);
   font-weight: 500;
-  line-height: 1.02;
+  line-height: 1.08;
 }
 
 .passport-feature p {
   margin: 0;
   max-width: 34rem;
   color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(1rem, 1.35vw, 1.34rem);
-  line-height: 1.28;
+  font-size: clamp(0.82rem, 0.95vw, 0.96rem);
+  line-height: 1.5;
 }
 
 .platforms-section {
@@ -1187,11 +1187,11 @@ h2 {
   }
 
   .passport-feature h3 {
-    font-size: clamp(1.8rem, 8vw, 2.45rem);
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
   }
 
   .passport-feature p {
-    font-size: 1rem;
+    font-size: 0.88rem;
   }
 
   .cta-section {

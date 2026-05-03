@@ -10,8 +10,8 @@
   --cyan: #64d6ff;
   --silver: #d9e2ee;
   --max: 1440px;
-  --content-pad: clamp(1.25rem, 7.6vw, 6.8rem);
-  --rule-pad: clamp(2rem, 7.6vw, 6.8rem);
+  --content-pad: clamp(1rem, 3.5vw, 3.5rem);
+  --rule-pad: clamp(1.5rem, 3.5vw, 3.5rem);
   --rule-gradient: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.9) 0%,
@@ -94,21 +94,13 @@ input {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.16em;
   width: fit-content;
-  font-size: clamp(2rem, 2.55vw, 2.7rem);
-  font-weight: 700;
-  letter-spacing: 0;
 }
 
-.brand i {
-  width: 0.62em;
-  height: 0.62em;
-  border: 0.15em solid var(--silver);
-  border-top-color: var(--violet);
-  border-right-color: var(--cyan);
-  border-radius: 50%;
-  transform: translateY(0.06em) rotate(-22deg);
+.brand-logo {
+  height: clamp(1.6rem, 2.2vw, 2.2rem);
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -152,10 +144,10 @@ input {
 
 .hero-media {
   position: absolute;
-  top: clamp(9.3rem, 17.8vh, 11.6rem);
-  left: clamp(2rem, 5.6vw, 5.05rem);
-  right: clamp(2rem, 5.6vw, 5.05rem);
-  height: clamp(27rem, 47.5vw, 36.4rem);
+  top: clamp(7rem, 13vh, 9rem);
+  left: -3rem;
+  right: -3rem;
+  height: clamp(34rem, 62vw, 54rem);
   opacity: 0;
   filter: blur(14px);
   transform: scale(0.985) rotateX(0deg) rotateY(0deg);
@@ -510,6 +502,7 @@ h2 {
 .platforms-track-wrap {
   overflow: hidden;
   padding-left: var(--content-pad);
+  padding-right: 0;
 }
 
 .platforms-track {
@@ -688,7 +681,7 @@ h2 {
 }
 
 .wallet-card--imageRight::before {
-  background: linear-gradient(0deg, var(--card-blue) 0%, #0a0f14 54%, var(--card-black) 100%);
+  background: linear-gradient(315deg, var(--card-blue) 0%, #0a0f14 50%, var(--card-black) 100%);
 }
 
 .wallet-copy {

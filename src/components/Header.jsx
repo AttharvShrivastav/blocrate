@@ -6,8 +6,7 @@ export default function Header() {
   return (
     <header className="site-header" data-animate="fade">
       <a className="brand" href="#home" aria-label="Blocrate home">
-        <span>Blocrate</span>
-        <i aria-hidden="true"></i>
+        <img className="brand-logo" src="assets/blocrate-logo.png" alt="Blocrate" />
       </a>
       <nav className="nav-links" aria-label="Main navigation">
         {nav.map((item) => (

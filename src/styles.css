@@ -144,10 +144,10 @@ input {
 
 .hero-media {
   position: absolute;
-  top: clamp(7rem, 13vh, 9rem);
+  top: clamp(3rem, 0vh, 9rem);
   left: -3rem;
   right: -3rem;
-  height: clamp(34rem, 62vw, 54rem);
+  height: clamp(25rem, 50vw, 54rem);
   opacity: 0;
   filter: blur(14px);
   transform: scale(0.985) rotateX(0deg) rotateY(0deg);
@@ -158,7 +158,7 @@ input {
 
 .hero-media img {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: contain;
   object-position: center;
   filter: contrast(1.05) saturate(1.08);

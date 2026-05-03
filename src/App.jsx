@@ -132,8 +132,8 @@ export default function App() {
         <ProofStrip />
         <WalletSection />
         <PassportSection />
-        <CtaSection />
-        <PlatformsSection />
+        {/* <CtaSection /> */}
+        {/* <PlatformsSection /> */}
       </main>
       <Footer />
     </>

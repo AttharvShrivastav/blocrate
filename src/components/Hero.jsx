@@ -8,13 +8,11 @@ export default function Hero() {
       <div className="hero-media" data-parallax="hero-media">
         <img src="assets/hero-bg.png" alt="" />
       </div>
-
       <div className="hero-copy">
         <h1 className="split" data-split>
           {hero.title}
         </h1>
       </div>
-
       <div className="hero-aside" data-animate="fade">
         <p>{hero.body}</p>
         <div className="button-row">
@@ -29,7 +27,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
       <div className="gradient-rule hero-rule" aria-hidden="true"></div>
     </section>
   );

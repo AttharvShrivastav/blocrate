@@ -40,7 +40,7 @@ export default function Footer() {
 
           <div className="footer-brand-block">
             <a className="brand footer-brand-wordmark" href="#">
-              <img className="brand-logo" src="assets/blocrate-logo.png" alt="Blocrate" />
+              <img className="brand-logo" src="assets/footer-logo.png" alt="Blocrate" />
             </a>
             <p className="footer-tagline">{footer.tagline}</p>
           </div>

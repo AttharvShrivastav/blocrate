@@ -1234,7 +1234,9 @@ h2 {
   }
 
   .footer-brand-wordmark .brand-logo {
-    height: clamp(2.8rem, 18vw, 5rem);
+    height: auto;
+    width: min(55vw, 10rem);
+    max-width: 100%;
   }
 }
 

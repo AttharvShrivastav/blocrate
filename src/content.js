@@ -1,5 +1,10 @@
 export const content = {
-  nav: ["Home", "Features", "How it works", "Roadmap"],
+  nav: [
+    { label: "Home", href: "#home" },
+    { label: "Features", href: "#features" },
+    { label: "How it works", href: "#how" },
+    { label: "Roadmap", href: "#roadmap" },
+  ],
   hero: {
     title: "Credit infrastructure for crypto",
     body:
@@ -12,52 +17,6 @@ export const content = {
     { value: "$2.4B", label: "simulated credit demand" },
     { value: "42ms", label: "risk signal refresh" },
     { value: "98.8%", label: "wallet coverage model" },
-  ],
-  features: [
-    {
-      kicker: "Risk Graph",
-      title: "Reputation that moves with the wallet.",
-      body:
-        "Map account history, protocol usage, income flow, and repayment behavior into an adaptive credit graph.",
-    },
-    {
-      kicker: "Liquidity Router",
-      title: "Match borrowers with capital in real time.",
-      body:
-        "Route credit requests across partner pools with policy controls, health checks, and transparent pricing.",
-    },
-    {
-      kicker: "Compliance Layer",
-      title: "Ship institutional controls without slowing builders.",
-      body:
-        "Compose approvals, audit trails, wallet screening, and portfolio reporting into one operational surface.",
-    },
-  ],
-  horizontal: [
-    {
-      step: "01",
-      title: "Connect intent",
-      body:
-        "Users connect a wallet, request a credit line, and define collateral preferences without leaving your product.",
-    },
-    {
-      step: "02",
-      title: "Score the graph",
-      body:
-        "Blocrate evaluates wallet behavior, protocol exposure, and offchain attestations through a live risk model.",
-    },
-    {
-      step: "03",
-      title: "Route capital",
-      body:
-        "Approved requests are matched with capital venues using dynamic rates, utilization limits, and policy rules.",
-    },
-    {
-      step: "04",
-      title: "Monitor health",
-      body:
-        "Positions update continuously with early-warning alerts, repayment tracking, and portfolio-grade analytics.",
-    },
   ],
   wallet: {
     cards: [

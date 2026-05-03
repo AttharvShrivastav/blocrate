@@ -4,16 +4,25 @@ const { hero } = content;
 
 export default function Hero() {
   return (
-    <section className="hero section-shell" id="home">
+    <section className="hero section-shell group" id="home">
+      {/* The Beam Element */}
+      <div className="border-beam" aria-hidden="true"></div>
+
       <div className="hero-media" data-parallax="hero-media">
         <img src="assets/hero-bg.png" alt="" />
       </div>
-      <div className="hero-copy">
+
+      <div className="hero-copy" style={{ position: "relative", zIndex: 20 }}>
         <h1 className="split" data-split>
           {hero.title}
         </h1>
       </div>
-      <div className="hero-aside" data-animate="fade">
+
+      <div 
+        className="hero-aside" 
+        data-animate="fade" 
+        style={{ position: "relative", zIndex: 20 }}
+      >
         <p>{hero.body}</p>
         <div className="button-row">
           <a className="button button-ghost" href="#features">
@@ -27,6 +36,7 @@ export default function Hero() {
           </a>
         </div>
       </div>
+
       <div className="gradient-rule hero-rule" aria-hidden="true"></div>
     </section>
   );

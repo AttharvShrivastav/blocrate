@@ -129,7 +129,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <ProofStrip />
+        {/* <ProofStrip /> */}
         <WalletSection />
         <PassportSection />
         {/* <CtaSection /> */}

@@ -1367,7 +1367,7 @@ h2 {
 }
 
 .footer-brand-wordmark .brand-logo {
-  height: clamp(5rem, 13vw, 12rem);
+  height: clamp(3rem, 13vw, 12rem);
   width: auto;
   opacity: 0.62;
 }

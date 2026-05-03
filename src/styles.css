@@ -1168,7 +1168,12 @@ h2 {
   .wallet-visual,
   .wallet-card--imageLeft .wallet-visual,
   .wallet-card--imageRight .wallet-visual {
-    min-height: 16rem;
+    min-height: 14rem;
+  }
+
+  .wallet-card--imageLeft .wallet-visual img,
+  .wallet-card--imageRight .wallet-visual img {
+    width: min(52vw, 13rem);
   }
 
   .passport-section {
@@ -1235,7 +1240,7 @@ h2 {
 
   .footer-brand-wordmark .brand-logo {
     height: auto;
-    width: min(55vw, 10rem);
+    width: min(32vw, 6.5rem);
     max-width: 100%;
   }
 }

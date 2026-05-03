@@ -8,7 +8,7 @@ export const content = {
   hero: {
     title: "Credit infrastructure for crypto",
     body:
-      "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan libero viverra a feugiat libero molestie aenean id scelerisque",
+      "Credit in crypto has not matched the scale we imagined, Blocrate envisions a self-sustaining stablecoin ecosystem capable of separating the good borrowers from the bad.",
     primaryCta: "Join Waitlist",
     secondaryCta: "Learn More",
     proof: ["LayerZero", "Astra", "Coinbase", "Stripe", "Aave"],
@@ -21,42 +21,42 @@ export const content = {
   wallet: {
     cards: [
       {
-        title: "A crypto wallet from the future",
+        title: "One wallet, One Score, Everywhere",
         body:
-          "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan libero viverra a feugiat libero molestie aenean id scelerisque",
+          "Blocrate scores your wallet based on your DeFi history, giving lenders a credit band to define the best lending rates possible",
         image: "assets/hand-image-1.png",
         layout: "imageLeft",
       },
       {
-        title: "A crypto wallet from the future",
+        title: "How Does it Work?",
         body:
-          "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan libero viverra a feugiat libero molestie aenean id scelerisque",
+          "We took the process of getting a credit score and put its efficiency on steroids.",
         secondary:
-          "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan",
+          "You sign up, and we pull your transaction history to immediately give you a credit score so that you can freely borrow at the best rates possible",
         image: "assets/hand-image-2.png",
         layout: "imageRight",
       },
     ],
   },
   passport: {
-    title: "A crypto wallet from the future",
+    title: "What do we enable?",
     cta: "Learn More",
     image: "assets/phone-credit-passport.png",
     features: [
       {
-        icon: "ph-currency-btc",
-        title: "Send & receive any time",
-        body: "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan",
+        icon: "ph-chart-line-up",
+        title: "Dynamically Updating Credit Scores",
+        body: "Blocrate tracks each of your borrows and repayments, allowing your score to reflect in real time unlike the usual monthly cycle one has to wait for",
       },
       {
-        icon: "ph-hand-coins",
-        title: "Send & receive any time",
-        body: "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan",
+        icon: "ph-intersect",
+        title: "Multi-Purpose Scoring",
+        body: "Blocrate's wallet score just starts with financing in DeFi, but the applications are limitless, think of raising debt capital, BNPL platforms or even buying a new TV on credit",
       },
       {
-        icon: "ph-wallet",
-        title: "Send & receive any time",
-        body: "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan",
+        icon: "ph-buildings",
+        title: "Build Your History, Raise Better",
+        body: "Blocrate's scoring model allows you to shift from TradFi to DeFi with no hurdles, we envision a future with an intertwined ecosystem of stablecoins and traditional finance.",
       },
     ],
   },

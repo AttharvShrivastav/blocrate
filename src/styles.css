@@ -334,14 +334,12 @@ h2 {
   grid-template-columns: minmax(22rem, 0.93fr) minmax(27rem, 0.76fr);
   gap: clamp(2.4rem, 3.7vw, 3.4rem);
   align-items: start;
-  perspective: 900px;
-  perspective-origin: center center;
 }
 
 .passport-phone {
   position: relative;
-  transform-style: preserve-3d;
   will-change: transform;
+  cursor: pointer;
   min-height: clamp(27rem, 39.2vw, 34.9rem);
   overflow: hidden;
   border-radius: 16px;

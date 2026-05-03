@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { content } from "../content";
 
 const { passport } = content;
@@ -6,37 +6,43 @@ const { passport } = content;
 export default function PassportSection() {
   const phoneRef = useRef(null);
 
-  useEffect(() => {
-    const phone = phoneRef.current;
+  const handleMouseMove = (e) => {
+    const card = phoneRef.current;
     const gsap = window.gsap;
-    if (!phone || !gsap) return;
+    if (!card || !gsap) return;
 
-    gsap.set(phone, { transformPerspective: 900 });
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
 
-    const rotX = gsap.quickTo(phone, "rotateX", { duration: 0.55, ease: "power3.out" });
-    const rotY = gsap.quickTo(phone, "rotateY", { duration: 0.55, ease: "power3.out" });
+    const rotateX = ((y - centerY) / centerY) * -12;
+    const rotateY = ((x - centerX) / centerX) * 14;
 
-    const onMove = (e) => {
-      const b = phone.getBoundingClientRect();
-      const x = (e.clientX - b.left) / b.width - 0.5;
-      const y = (e.clientY - b.top) / b.height - 0.5;
-      rotX(y * -11);
-      rotY(x * 15);
-    };
+    gsap.to(card, {
+      rotateX,
+      rotateY,
+      transformPerspective: 900,
+      duration: 0.4,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+  };
 
-    const onLeave = () => {
-      rotX(0);
-      rotY(0);
-    };
+  const handleMouseLeave = () => {
+    const card = phoneRef.current;
+    const gsap = window.gsap;
+    if (!card || !gsap) return;
 
-    phone.addEventListener("pointermove", onMove);
-    phone.addEventListener("pointerleave", onLeave);
-
-    return () => {
-      phone.removeEventListener("pointermove", onMove);
-      phone.removeEventListener("pointerleave", onLeave);
-    };
-  }, []);
+    gsap.to(card, {
+      rotateX: 0,
+      rotateY: 0,
+      duration: 0.9,
+      ease: "elastic.out(1, 0.55)",
+      overwrite: "auto",
+    });
+  };
 
   return (
     <section className="passport-section section-shell" id="how">
@@ -50,7 +56,13 @@ export default function PassportSection() {
       </div>
 
       <div className="passport-layout">
-        <div className="passport-phone" ref={phoneRef} data-animate="rise">
+        <div
+          className="passport-phone"
+          ref={phoneRef}
+          data-animate="rise"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
           <img src={passport.image} alt="Credit score passport phone interface" />
         </div>
 

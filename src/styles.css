@@ -682,7 +682,7 @@ h2 {
 }
 
 .wallet-card--imageRight::before {
-  background: linear-gradient(315deg, var(--card-blue) 0%, #0a0f14 50%, var(--card-black) 100%);
+  background: linear-gradient(0deg, var(--card-blue) 0%, #0a0f14 50%, var(--card-black) 100%);
 }
 
 .wallet-copy {
@@ -726,7 +726,7 @@ h2 {
   position: relative;
   z-index: 1;
   align-self: stretch;
-  min-height: 100%;
+  min-height: 80%;
 }
 
 .wallet-visual img {
@@ -743,9 +743,10 @@ h2 {
 }
 
 .wallet-card--imageLeft .wallet-visual img {
-  left: clamp(4.5rem, 9.2vw, 8.25rem);
-  bottom: clamp(4rem, 6vw, 5.45rem);
-  width: clamp(18rem, 27vw, 24.5rem);
+  left: clamp(2rem, 5vw, 8.25rem);
+  bottom: 10%; /* Using percentage helps with responsive height */
+  width: auto; /* Allow width to be determined by height */
+  height: 80%;
 }
 
 .wallet-card--imageRight .wallet-visual {
@@ -753,9 +754,10 @@ h2 {
 }
 
 .wallet-card--imageRight .wallet-visual img {
-  right: clamp(4.2rem, 9.8vw, 8.9rem);
+  right: clamp(2rem, 5vw, 8.9rem);
   bottom: 0;
-  width: clamp(18rem, 27.5vw, 25rem);
+  width: auto;
+  height: 90%;
 }
 
 .card-rule {

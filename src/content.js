@@ -23,7 +23,7 @@ export const content = {
         title: "One wallet, One Score, Everywhere",
         body:
           "Blocrate scores your wallet based on your DeFi history, giving lenders a credit band to define the best lending rates possible",
-        image: "assets/hand-image-1.png",
+        image: "assets/hand-image-1-real.png",
         layout: "imageLeft",
       },
       {
@@ -32,7 +32,7 @@ export const content = {
           "We took the process of getting a credit score and put its efficiency on steroids.",
         secondary:
           "You sign up, and we pull your transaction history to immediately give you a credit score so that you can freely borrow at the best rates possible",
-        image: "assets/hand-image-2.png",
+        image: "assets/hand-image-2-real.png",
         layout: "imageRight",
       },
     ],
@@ -104,13 +104,13 @@ export const content = {
   footer: {
     tagline: "Private, global crypto credit infrastructure.",
     social: [
-      { icon: "ph-x-logo", label: "X / Twitter", href: "#" },
+      { icon: "ph-x-logo", label: "X / Twitter", href: "https://x.com/blocrateglobal?s=21&t=VcyqBwZfJdu6klmdoYAjAQ" },
       { icon: "ph-threads-logo", label: "Threads", href: "#" },
-      { icon: "ph-instagram-logo", label: "Instagram", href: "#" },
-      { icon: "ph-discord-logo", label: "Discord", href: "#" },
-      { icon: "ph-telegram-logo", label: "Telegram", href: "#" },
-      { icon: "ph-linkedin-logo", label: "LinkedIn", href: "#" },
-      { icon: "ph-envelope", label: "Email", href: "#" },
+      { icon: "ph-instagram-logo", label: "Instagram", href: "https://www.instagram.com/blocrate" },
+      { icon: "ph-discord-logo", label: "Discord", href: "https://discord.com/invite/czHvKfMya" },
+      { icon: "ph-telegram-logo", label: "Telegram", href: "https://t.me/Blocrate" },
+      { icon: "ph-linkedin-logo", label: "LinkedIn", href: "https://www.linkedin.com/company/blocrate/" },
+      { icon: "ph-envelope", label: "Email", href: "mailto:info@blocrate.com" },
     ],
   },
   roadmap: [

@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="border-beam" aria-hidden="true"></div>
 
       <div className="hero-media" data-parallax="hero-media">
-        <img src="assets/hero-bg.png" alt="" />
+        <img src="assets/hero-bg1.png" alt="" />
       </div>
 
       <div className="hero-copy" style={{ position: "relative", zIndex: 20 }}>

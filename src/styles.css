@@ -1298,7 +1298,7 @@ h2 {
 }
 
 .footer-card-copy h2 {
-  max-width: 28rem;
+  max-width: 30rem;
   margin-bottom: clamp(1rem, 1.8vw, 1.4rem);
   font-size: clamp(1.8rem, 3.2vw, 3rem);
   font-weight: 500;

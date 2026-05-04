@@ -1,9 +1,8 @@
 export const content = {
   nav: [
     { label: "Home", href: "#home" },
-    { label: "Features", href: "#features" },
-    { label: "How it works", href: "#how" },
-    { label: "Roadmap", href: "#roadmap" },
+    { label: "How it Works", href: "#features" },
+    { label: "Features", href: "#how" },
   ],
   hero: {
     title: "Credit infrastructure for crypto",
@@ -96,10 +95,10 @@ export const content = {
     ],
   },
   cta: {
-    title: "Try Blocrate as soon as it get's ready",
-    body: "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan",
+    title: "Scoring the Stablecoin Economy",
+    // body: "Lorem ipsum dolor sit amet consectetur eget odio tincidunt diam accumsan",
     secondaryCta: "Learn More",
-    primaryCta: "Join Waitlist",
+    primaryCta: "Early Access Here",
     image: "assets/cta-bg.png",
   },
   footer: {

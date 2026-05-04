@@ -212,7 +212,7 @@ h2 {
 }
 
 h1 {
-  max-width: 41rem;
+  max-width: 30rem;
   font-size: clamp(3.25rem, 4.5vw, 4.1rem);
   line-height: 0.98;
 }
